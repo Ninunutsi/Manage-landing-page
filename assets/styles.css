@@ -1,0 +1,348 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    overflow-x: hidden;
+
+}
+
+:root{
+    --BrightRed: hsl(12, 88%, 59%);
+    --DarkBlue: hsl(228, 39%, 23%);
+    --DarkGrayishBlue: hsl(227, 12%, 61%);
+    --VeryDarkBlue: hsl(233, 12%, 13%);
+    --VeryPaleRed: hsl(13, 100%, 96%);
+    --VaryLightGray: hsl(0, 0%, 98%);
+}
+
+.header{
+    display: flex;
+    padding: 5vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav a{
+    line-height: 26px;
+    font-size: 15px;
+    color: var(--DarkBlue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav a:hover{
+    color: var(--DarkGrayishBlue);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.btn{
+    background-color: var(--BrightRed);
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 23px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, var(--VeryPaleRed) 0px 12px 8px, var(--VeryPaleRed) 0px 24px 16px;
+    background-color: hsl(11, 92%, 76%);
+    transition: 1s;
+}
+
+/* main{
+    margin: 20px 8vw;
+} */
+
+.section-one{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 8vw;
+}
+
+.main-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    padding: 29px 0;
+}
+
+.bg-pattern{
+    position: absolute;
+    z-index: -88888;
+    right: -120px;
+    top: -110px;
+    width: 700px;
+}
+
+.main-heading{
+    color: var(--GrayishBlue);
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 58px;
+}
+
+.para{
+    color: var(--DarkGrayishBlue);
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.main-left button{
+    align-self: flex-start;
+}
+
+.section-two{
+    margin-top: 40px;
+    gap: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 8vw;
+}
+
+.two-left{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.two-bg{
+    position: absolute;
+    z-index: -88888;
+    /* width: 630px; */
+    left: -40%;
+    top: 115vh;
+}
+
+.two-right{
+    width: 60%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 50px;
+}
+
+.texts-block{
+    display: flex;
+    flex-direction: column;
+}
+
+.texts-block-header{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.left-para{
+    padding-left: 77px;
+    padding-top: 13px;
+}
+
+.num{
+    padding: 8px 23px;
+    font-weight: 500;
+    color: white;
+    background-color: var(--BrightRed);
+    border-radius: 20px;
+}
+
+.texts-block-heading{
+    font-weight: 700;
+    color: var(--DarkBlue);
+    font-size: 17px;
+    line-height: 29px;
+}
+
+.section-three{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    margin-top: 8vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.testimonials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    animation: scroll 10s linear infinite alternate;
+    position: relative;
+    transition: 1s;
+    animation-play-state: paused;
+
+}
+
+.testimonials:hover{
+    animation-play-state: running;
+}
+
+@keyframes scroll{
+    0% {left:400px;}
+    100% {left:-400px;}
+}
+
+.people{
+    padding: 6rem 35px 20px 35px;
+    background-color: var(--VaryLightGray);
+    border-radius: 15px;
+    width: 500px;
+    height: 280px;
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: relative;
+    overflow: visible;
+}
+
+.avatar{
+    width: 88px;
+    position: absolute;
+    top: -16%;
+}
+
+.name{
+    font-size: 22px;
+    color: var(--DarkBlue);
+}
+
+.section-four{
+    width: 100vw;
+    padding: 4.5rem 15vw;
+    background-color: var(--BrightRed);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url(./images/bg-simplify-section-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.white{
+    color: white;
+    font-size: 33px;
+    line-height: 45px;
+    width: 320px;
+}
+
+.white-btn{
+    background: white;
+    color: var(--BrightRed);
+}
+
+.white-btn:hover{
+    background-color: hsl(11, 71%, 88%);
+}
+
+
+.footer{
+    width: 100vw;
+    padding: 4rem 7vw;
+    background-color: var(--VeryDarkBlue);
+}
+
+.footer-btn:hover{
+    box-shadow: none;
+}
+
+.container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "logo menu menu searchbar"
+      "icons menu menu c"; 
+}
+
+.logo{ 
+    grid-area: logo; 
+}
+.icons{ 
+    grid-area: icons;
+    display: flex;
+    gap: 10px
+}
+
+.icons i{
+    color: white;
+    width: 20px;
+}
+
+.icons i:hover{
+    color: var(--BrightRed);
+    transition: 1s;
+    cursor: pointer;
+}
+.menu{
+     grid-area: menu;
+     display: flex; 
+     gap: 10vw;
+}
+
+.menu-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-column a{
+    font-size: 17px;
+    line-height: 27px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-column a:hover{
+    transition: 1s;
+    color: var(--BrightRed);
+}
+.searchbar{ 
+    grid-area: searchbar; 
+}
+
+.input{
+    height: 45px;
+    padding-left: 10px;
+    border-radius: 30px;
+    border: none;
+    width: 70%;
+}
+.c{ 
+    grid-area: c; 
+    color: white;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.logo img{
+    filter: brightness(0) invert(1);
+}
