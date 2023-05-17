@@ -289,12 +289,13 @@
 .icons{ 
     grid-area: icons;
     display: flex;
-    gap: 10px
+    gap: 10px;
 }
 
 .icons i{
     color: white;
-    width: 20px;
+    padding: 20px 0;
+    transform: scale(0.6);
 }
 
 .icons i:hover{
@@ -338,9 +339,10 @@
 }
 .c{ 
     grid-area: c; 
-    color: white;
+    color: var(--DarkGrayishBlue);
     font-size: 14px;
     margin-top: 30px;
+
 }
 
 .logo img{
