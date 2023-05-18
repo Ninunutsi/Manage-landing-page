@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
     overflow-x: hidden;
-
 }
 
 :root{
@@ -186,13 +185,13 @@
     animation: scroll 10s linear infinite alternate;
     position: relative;
     transition: 1s;
-    animation-play-state: paused;
-
-}
-
-.testimonials:hover{
     animation-play-state: running;
+
 }
+
+/* .testimonials:hover{
+    animation-play-state: running;
+} */
 
 @keyframes scroll{
     0% {left:400px;}
@@ -342,9 +341,13 @@
     color: var(--DarkGrayishBlue);
     font-size: 14px;
     margin-top: 30px;
-
 }
 
 .logo img{
     filter: brightness(0) invert(1);
+}
+
+
+.hamburger{
+    display: none;
 }

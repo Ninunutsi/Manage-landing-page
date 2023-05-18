@@ -105,10 +105,27 @@
 @media(max-width: 667px){
 
     .header{
-        display: flex;
-        padding: 5vh 2vw;
-        align-items: center;
-        justify-content: space-around;
+        padding: 5vh 5vw;
+        justify-content: space-between;
+    }
+
+    .overlay{
+        width: 100vw;
+        height: 100vh;
+        top: 70px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        display: none;
+        z-index: 88888;
+        background-color: rgba(0, 0, 0, 0.128);
+        animation-name: fadeIn;
+        animation-duration: 1s;
+    }
+
+    .active{
+        display: block;
     }
     
     .nav{
@@ -116,7 +133,23 @@
         align-items: center;
         gap: 20px;
 
-        display: none;
+        background-color: rgb(255, 255, 255);
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        z-index: 99999;
+        padding: 30px 70px;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation-name: fadeIn;
+        animation-duration: 1s;
+    }
+
+    @keyframes fadeIn{
+        0% {opacity: 0;}
+        100% {opacity: 1;}
     }
     
     .header button{
@@ -245,13 +278,10 @@
         animation: scroll 10s linear infinite alternate;
         position: relative;
         transition: 1s;
-        animation-play-state: paused;
+        animation-play-state: running;
     
     }
     
-    .testimonials:hover{
-        animation-play-state: paused;
-    }
     
     @keyframes scroll{
         0% {left:400px;}
@@ -332,6 +362,7 @@
           "icons"
           "logo"
           "c"; 
+          overflow: hidden;
     }
     
     .logo{ 
@@ -342,7 +373,8 @@
     .icons{ 
         grid-area: icons;
         display: flex;
-        gap: 10px
+        gap: 10px;
+        justify-content: center;
     }
     
     .icons i{
@@ -379,5 +411,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
     }
 }
